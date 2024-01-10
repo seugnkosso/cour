@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://flask.palletsprojects.com/en/3.0.x/tutorial/layout/ -->
+<html lang="fr" data-content_root="../../" class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mise en page du projet — Flask Documentation (3.0.x)</title>
+    <link rel="stylesheet" type="text/css" href="./1Mise en page du Projet_files/pygments.css">
+    <link rel="stylesheet" type="text/css" href="./1Mise en page du Projet_files/flask.css">
+    <link rel="stylesheet" type="text/css" href="./1Mise en page du Projet_files/tabs.css">
+    <link rel="stylesheet" type="text/css" href="./1Mise en page du Projet_files/badge_only.css">
+    <script src="./1Mise en page du Projet_files/documentation_options.js.téléchargement"></script>
+    <script src="./1Mise en page du Projet_files/doctools.js.téléchargement"></script>
+    <script src="./1Mise en page du Projet_files/sphinx_highlight.js.téléchargement"></script>
+    <script async="async" src="./1Mise en page du Projet_files/readthedocs-doc-embed.js.téléchargement"></script>
+    <link rel="icon" href="https://flask.palletsprojects.com/en/3.0.x/_static/shortcut-icon.png">
+    <link rel="index" title="Index" href="https://flask.palletsprojects.com/en/3.0.x/genindex/">
+    <link rel="search" title="Recherche" href="https://flask.palletsprojects.com/en/3.0.x/search/">
+    <link rel="next" title="Configuration de l&#39;Application" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/factory/">
+    <link rel="prev" title="Tutoriel" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/"> 
+  
+<!-- RTD Extra Head -->
+
+<link rel="stylesheet" href="./1Mise en page du Projet_files/readthedocs-doc-embed.css" type="text/css">
+
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": false, "api_host": "https://readthedocs.org", "builder": "sphinx", "canonical_url": null, "docroot": "/docs/", "features": {"docsearch_disabled": true}, "global_analytics_code": "UA-17997319-1", "language": "en", "page": "tutorial/layout", "programming_language": "py", "project": "flask", "proxied_api_host": "/_", "source_suffix": ".rst", "subprojects": {}, "theme": "flask", "user_analytics_code": "", "version": "3.0.x"}</script>
+
+<!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+-->
+<script type="text/javascript">
+READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
+</script>
+
+<script type="text/javascript" src="./1Mise en page du Projet_files/readthedocs-analytics.js.téléchargement" async="async"></script>
+
+<!-- end RTD <extrahead> -->
+<script type="text/javascript" src="./1Mise en page du Projet_files/jquery.js.téléchargement"></script><script src="./1Mise en page du Projet_files/js" type="text/javascript" async=""></script><script src="./1Mise en page du Projet_files/ethicalads.min.js.téléchargement" type="text/javascript" async="" id="ethicaladsjs"></script><style type="text/css">/* Copyright 2021 Google Inc. All Rights Reserved. */<br>.goog-te-banner-frame{left:0px;top:0px;height:39px;width:100%;z-index:10000001;position:fixed;border:none;border-bottom:1px solid #6b90da;margin:0;-moz-box-shadow:0 0 8px 1px #999999;-webkit-box-shadow:0 0 8px 1px #999999;box-shadow:0 0 8px 1px #999999;_position:absolute}.goog-te-menu-frame{z-index:10000002;position:fixed;border:none;-moz-box-shadow:0 3px 8px 2px #999999;-webkit-box-shadow:0 3px 8px 2px #999999;box-shadow:0 3px 8px 2px #999999;_position:absolute}.goog-te-ftab-frame{z-index:10000000;border:none;margin:0}.goog-te-gadget{font-family:arial;font-size:11px;color:#666;white-space:nowrap}.goog-te-gadget img{vertical-align:middle;border:none}.goog-te-gadget-simple{background-color:#fff;border-left:1px solid #d5d5d5;border-top:1px solid #9b9b9b;border-bottom:1px solid #e8e8e8;border-right:1px solid #d5d5d5;font-size:10pt;display:inline-block;padding-top:1px;padding-bottom:2px;cursor:pointer;zoom:1;*display:inline}.goog-te-gadget-icon{margin-left:2px;margin-right:2px;width:19px;height:19px;border:none;vertical-align:middle}.goog-te-combo{margin-left:4px;margin-right:4px;vertical-align:baseline;*vertical-align:middle}.goog-te-gadget .goog-te-combo{margin:4px 0}.goog-logo-link,.goog-logo-link:link,.goog-logo-link:visited,.goog-logo-link:hover,.goog-logo-link:active{font-size:12px;font-weight:bold;color:#444;text-decoration:none}.goog-te-banner .goog-logo-link,.goog-close-link{display:block;margin:0px 10px}.goog-te-banner .goog-logo-link{padding-top:2px;padding-left:4px}.goog-te-combo,.goog-te-banner *,.goog-te-ftab *,.goog-te-menu *,.goog-te-menu2 *,.goog-te-balloon *{font-family:arial;font-size:10pt}.goog-te-banner{margin:0;background-color:#e4effb;overflow:hidden}.goog-te-banner img{border:none}.goog-te-banner-content{color:#000}.goog-te-banner-content img{vertical-align:middle}.goog-te-banner-info{color:#666;vertical-align:top;margin-top:0px;font-size:7pt}.goog-te-banner-margin{width:8px}.goog-te-button{border-color:#e7e7e7;border-style:none solid solid none;border-width:0 1px 1px 0}.goog-te-button div{border-color:#cccccc #999999 #999999 #cccccc;border-right:1px solid #999999;border-style:solid;border-width:1px;height:20px}.goog-te-button button{background:transparent;border:none;cursor:pointer;height:20px;overflow:hidden;margin:0;vertical-align:top;white-space:nowrap}.goog-te-button button:active{background:none repeat scroll 0 0 #cccccc}.goog-te-ftab{margin:0px;background-color:#fff;white-space:nowrap}.goog-te-ftab-link{text-decoration:none;font-weight:bold;font-size:10pt;border:1px outset #888;padding:6px 10px;white-space:nowrap;position:absolute;left:0px;top:0px}.goog-te-ftab-link img{margin-left:2px;margin-right:2px;width:19px;height:19px;border:none;vertical-align:middle}.goog-te-ftab-link span{text-decoration:underline;margin-left:2px;margin-right:2px;vertical-align:middle}.goog-float-top .goog-te-ftab-link{padding:2px 2px;border-top-width:0px}.goog-float-bottom .goog-te-ftab-link{padding:2px 2px;border-bottom-width:0px}.goog-te-menu-value{text-decoration:none;color:#0000cc;white-space:nowrap;margin-left:4px;margin-right:4px}.goog-te-menu-value span{text-decoration:underline}.goog-te-menu-value img{margin-left:2px;margin-right:2px}.goog-te-gadget-simple .goog-te-menu-value{color:#000}.goog-te-gadget-simple .goog-te-menu-value span{text-decoration:none}.goog-te-menu{background-color:#ffffff;text-decoration:none;border:2px solid #c3d9ff;overflow-y:scroll;overflow-x:hidden;position:absolute;left:0;top:0}.goog-te-menu-item{padding:3px;text-decoration:none}.goog-te-menu-item,.goog-te-menu-item:link{color:#0000cc;background:#ffffff}.goog-te-menu-item:visited{color:#551a8b}.goog-te-menu-item:hover{background:#c3d9ff}.goog-te-menu-item:active{color:#0000cc}.goog-te-menu2{background-color:#ffffff;text-decoration:none;border:1px solid #6b90da;overflow:hidden;padding:4px}.goog-te-menu2-colpad{width:16px}.goog-te-menu2-separator{margin:6px 0;height:1px;background-color:#aaa;overflow:hidden}.goog-te-menu2-item div,.goog-te-menu2-item-selected div{padding:4px}.goog-te-menu2-item .indicator{display:none}.goog-te-menu2-item-selected .indicator{display:auto}.goog-te-menu2-item-selected .text{padding-left:4px;padding-right:4px}.goog-te-menu2-item,.goog-te-menu2-item-selected{text-decoration:none}.goog-te-menu2-item div,.goog-te-menu2-item:link div,.goog-te-menu2-item:visited div,.goog-te-menu2-item:active div{color:#0000cc;background:#ffffff}.goog-te-menu2-item:hover div{color:#ffffff;background:#3366cc}.goog-te-menu2-item-selected div,.goog-te-menu2-item-selected:link div,.goog-te-menu2-item-selected:visited div,.goog-te-menu2-item-selected:hover div,.goog-te-menu2-item-selected:active div{color:#000;font-weight:bold}.goog-te-balloon{background-color:#ffffff;overflow:hidden;padding:8px;border:none;-moz-border-radius:10px;border-radius:10px}.goog-te-balloon-frame{background-color:#ffffff;border:1px solid #6b90da;-moz-box-shadow:0 3px 8px 2px #999999;-webkit-box-shadow:0 3px 8px 2px #999999;box-shadow:0 3px 8px 2px #999999;-moz-border-radius:8px;border-radius:8px}.goog-te-balloon img{border:none}.goog-te-balloon-text{margin-top:6px}.goog-te-balloon-zippy{margin-top:6px;white-space:nowrap}.goog-te-balloon-zippy *{vertical-align:middle}.goog-te-balloon-zippy .minus{background-image:url(//www.google.com/images/zippy_minus_sm.gif)}.goog-te-balloon-zippy .plus{background-image:url(//www.google.com/images/zippy_plus_sm.gif)}.goog-te-balloon-zippy span{color:#00c;text-decoration:underline;cursor:pointer;margin:0 4px}.goog-te-balloon-form{margin:6px 0 0 0}.goog-te-balloon-form form{margin:0}.goog-te-balloon-form form textarea{margin-bottom:4px;width:100%}.goog-te-balloon-footer{margin:6px 0 4px 0}.goog-te-spinner-pos{z-index:1000;position:fixed;transition-delay:0.6s;left:-1000px;top:-1000px}.goog-te-spinner-animation{background:#ccc;display:flex;align-items:center;justify-content:center;width:104px;height:104px;border-radius:50px;background:#fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciLz4=) 50% 50% no-repeat;transition:all 0.6s ease-in-out;transform:scale(0.4);opacity:0}.goog-te-spinner-animation-show{transform:scale(0.5);opacity:1}.goog-te-spinner{margin:2px 0 0 2px;animation:goog-te-spinner-rotator 1.4s linear infinite}@keyframes goog-te-spinner-rotator{0%{transform:rotate(0deg)}100%{transform:rotate(270deg)}}.goog-te-spinner-path{stroke-dasharray:187;stroke-dashoffset:0;stroke:#4285f4;transform-origin:center;animation:goog-te-spinner-dash 1.4s ease-in-out infinite}@keyframes goog-te-spinner-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}100%{stroke-dashoffset:187;transform:rotate(450deg)}}#goog-gt-tt html,#goog-gt-tt body,#goog-gt-tt div,#goog-gt-tt span,#goog-gt-tt iframe,#goog-gt-tt h1,#goog-gt-tt h2,#goog-gt-tt h3,#goog-gt-tt h4,#goog-gt-tt h5,#goog-gt-tt h6,#goog-gt-tt p,#goog-gt-tt a,#goog-gt-tt img,#goog-gt-tt ol,#goog-gt-tt ul,#goog-gt-tt li,#goog-gt-tt table,#goog-gt-tt form,#goog-gt-tt tbody,#goog-gt-tt tr,#goog-gt-tt td{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;text-align:left;line-height:normal}#goog-gt-tt ol,#goog-gt-tt ul{list-style:none}#goog-gt-tt table{border-collapse:collapse;border-spacing:0}#goog-gt-tt caption,#goog-gt-tt th,#goog-gt-tt td{text-align:left;font-weight:normal}#goog-gt-tt input::-moz-focus-inner{border:0}div#goog-gt-tt{padding:10px 14px}#goog-gt-tt{color:#222;background-color:#ffffff;border:1px solid #eee;box-shadow:0 4px 16px rgba(0,0,0,.2);-moz-box-shadow:0 4px 16px rgba(0,0,0,.2);-webkit-box-shadow:0 4px 16px rgba(0,0,0,.2);display:none;font-family:arial;font-size:10pt;width:420px;padding:12px;position:absolute;z-index:10000}#goog-gt-tt .original-text,.gt-hl-layer{clear:both;font-size:10pt;position:relative;text-align:justify;width:100%}#goog-gt-tt .title{color:#999;font-family:arial,sans-serif;margin:4px 0;text-align:left}#goog-gt-tt .close-button{display:none}#goog-gt-tt .logo{float:left;margin:0px}#goog-gt-tt .activity-links{display:inline-block}#goog-gt-tt .started-activity-container{display:none;width:100%}#goog-gt-tt .activity-root{margin-top:20px}#goog-gt-tt .left{float:left}#goog-gt-tt .right{float:right}#goog-gt-tt .bottom{min-height:15px;position:relative;height:1%}#goog-gt-tt .status-message{background:-moz-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-webkit-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-o-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-ms-linear-gradient(top,#29910d 0%,#20af0e 100%);background:linear-gradient(top,#29910d 0%,#20af0e 100%);background:#29910d;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;box-shadow:inset 0px 2px 2px #1e6609;-moz-box-shadow:inset 0px 2px 2px #1e6609;-webkit-box-shadow:inset 0px 2px 2px #1e6609;color:white;font-size:9pt;font-weight:bolder;margin-top:12px;padding:6px;text-shadow:1px 1px 1px #1e6609}#goog-gt-tt .activity-link{color:#1155cc;cursor:pointer;font-family:arial;font-size:11px;margin-right:15px;text-decoration:none}#goog-gt-tt textarea{font-family:arial;resize:vertical;width:100%;margin-bottom:10px;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;border:1px solid #d9d9d9;border-top:1px solid silver;font-size:13px;height:auto;overflow-y:auto;padding:1px}#goog-gt-tt textarea:focus{-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);border:1px solid #4d90fe;outline:none}#goog-gt-tt .activity-cancel{margin-right:10px}#goog-gt-tt .translate-form{min-height:25px;vertical-align:middle;padding-top:8px}#goog-gt-tt .translate-form .activity-form{margin-bottom:5px;margin-bottom:0px}#goog-gt-tt .translate-form .activity-form input{display:inline-block;min-width:54px;*min-width:70px;border:1px solid #dcdcdc;border:1px solid rgba(0,0,0,0.1);text-align:center;color:#444;font-size:11px;font-weight:bold;height:27px;outline:0;padding:0 8px;vertical-align:middle;line-height:27px;margin:0 16px 0 0;box-shadow:0 1px 2px rgba(0,0,0,.1);-moz-box-shadow:0 1px 2px rgba(0,0,0,.1);-webkit-box-shadow:0 1px 2px rgba(0,0,0,.1);-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;-webkit-transition:all 0.218s;-moz-transition:all 0.218s;-o-transition:all 0.218s;transition:all 0.218s;background-color:#f5f5f5;background-image:-webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-moz-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-ms-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-o-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:linear-gradient(top,#f5f5f5,#f1f1f1);-webkit-user-select:none;-moz-user-select:none;cursor:default}#goog-gt-tt .translate-form .activity-form input:hover{border:1px solid #c6c6c6;color:#222;-webkit-transition:all 0.0s;-moz-transition:all 0.0s;-o-transition:all 0.0s;transition:all 0.0s;background-color:#f8f8f8;background-image:-webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-moz-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-ms-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-o-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:linear-gradient(top,#f8f8f8,#f1f1f1)}#goog-gt-tt .translate-form .activity-form input:active{border:1px solid #c6c6c6;color:#333;background-color:#f6f6f6;background-image:-webkit-gradient(linear,left top,left bottom,from(#f6f6f6),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-moz-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-ms-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-o-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:linear-gradient(top,#f6f6f6,#f1f1f1)}#goog-gt-tt .translate-form .activity-form input:focus #goog-gt-tt .translate-form .activity-form input.focus #goog-gt-tt .translate-form .activity-form input:active,#goog-gt-tt .translate-form .activity-form input:focus:active,#goog-gt-tt .translate-form .activity-form input:.focus:active{box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5);-webkit-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5);-moz-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5)}#goog-gt-tt .translate-form .activity-form input:focus,#goog-gt-tt .translate-form .activity-form input.focus{outline:none;border:1px solid #4d90fe;z-index:4!important}#goog-gt-tt .translate-form .activity-form input.selected{background-color:#eeeeee;background-image:-webkit-gradient(linear,left top,left bottom,from(#eeeeee),to(#e0e0e0));background-image:-webkit-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-moz-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-ms-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-o-linear-gradient(top,#eeeeee,#e0e0e0);background-image:linear-gradient(top,#eeeeee,#e0e0e0);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);border:1px solid #ccc;color:#333}#goog-gt-tt .translate-form .activity-form input.activity-submit{color:white;border-color:#3079ed;background-color:#4d90fe;background-image:-webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#4787ed));background-image:-webkit-linear-gradient(top,#4d90fe,#4787ed);background-image:-moz-linear-gradient(top,#4d90fe,#4787ed);background-image:-ms-linear-gradient(top,#4d90fe,#4787ed);background-image:-o-linear-gradient(top,#4d90fe,#4787ed);background-image:linear-gradient(top,#4d90fe,#4787ed)}#goog-gt-tt .translate-form .activity-form input.activity-submit:hover #goog-gt-tt .translate-form .activity-form input.activity-submit:focus,#goog-gt-tt .translate-form .activity-form input.activity-submit.focus #goog-gt-tt .translate-form .activity-form input.activity-submit:active{border-color:#3079ed;background-color:#357ae8;background-image:-webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#357ae8));background-image:-webkit-linear-gradient(top,#4d90fe,#357ae8);background-image:-moz-linear-gradient(top,#4d90fe,#357ae8);background-image:-ms-linear-gradient(top,#4d90fe,#357ae8);background-image:-o-linear-gradient(top,#4d90fe,#357ae8);background-image:linear-gradient(top,#4d90fe,#357ae8)}#goog-gt-tt .translate-form .activity-form input.activity-submit:hover{box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1);-moz-box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1)}#goog-gt-tt .translate-form .activity-form input:focus,#goog-gt-tt .translate-form .activity-form input.focus,#goog-gt-tt .translate-form .activity-form input:active,#goog-gt-tt .translate-form .activity-form input:hover,#goog-gt-tt .translate-form .activity-form input.activity-submit:focus,#goog-gt-tt .translate-form .activity-form input.activity-submit.focus,#goog-gt-tt .translate-form .activity-form input.activity-submit:active,#goog-gt-tt .translate-form .activity-form input.activity-submit:hover{border-color:#3079ed}#goog-gt-tt .gray{color:#999;font-family:arial,sans-serif}#goog-gt-tt .alt-helper-text{color:#999;font-size:11px;font-family:arial,sans-serif;margin:15px 0px 5px 0px}#goog-gt-tt .alt-error-text{color:#800;display:none;font-size:9pt}.goog-text-highlight{background-color:#c9d7f1;-webkit-box-shadow:2px 2px 4px #9999aa;-moz-box-shadow:2px 2px 4px #9999aa;box-shadow:2px 2px 4px #9999aa;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;position:relative}#goog-gt-tt .alt-menu.goog-menu{background:#ffffff;border:1px solid #dddddd;-webkit-box-shadow:0px 3px 3px #888;-moz-box-shadow:0px 2px 20px #888;box-shadow:0px 2px 4px #99a;min-width:0;outline:none;padding:0;position:absolute;z-index:2000}#goog-gt-tt .alt-menu .goog-menuitem{cursor:pointer;padding:2px 5px 5px;margin-right:0px;border-style:none}#goog-gt-tt .alt-menu div.goog-menuitem:hover{background:#ddd}#goog-gt-tt .alt-menu .goog-menuitem h1{font-size:100%;font-weight:bold;margin:4px 0px}#goog-gt-tt .alt-menu .goog-menuitem strong{color:#345aad}#goog-gt-tt .goog-submenu-arrow{text-align:right;position:absolute;right:0;left:auto}#goog-gt-tt .goog-menuitem-rtl .goog-submenu-arrow{text-align:left;position:absolute;left:0;right:auto}#goog-gt-tt .gt-hl-text,#goog-gt-tt .trans-target-highlight{background-color:#f1ea00;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-moz-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;-webkit-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;color:#f1ea00;cursor:pointer;margin:-2px -2px -2px -3px;padding:2px 2px 2px 3px;position:relative}#goog-gt-tt .trans-target-highlight{color:#222}#goog-gt-tt .gt-hl-layer{color:white;position:absolute!important}#goog-gt-tt .trans-target,#goog-gt-tt .trans-target .trans-target-highlight{background-color:#c9d7f1;border-radius:4px 4px 0px 0px;-webkit-border-radius:4px 4px 0px 0px;-moz-border-radius:4px 4px 0px 0px;-moz-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;-webkit-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;cursor:pointer;margin:-2px -2px -2px -3px;padding:2px 2px 3px 3px;position:relative}#goog-gt-tt span:focus{outline:none}#goog-gt-tt .trans-edit{background-color:transparent;border:1px solid #4d90fe;border-radius:0em;-webkit-border-radius:0em;-moz-border-radius:0em;margin:-2px;padding:1px}#goog-gt-tt .gt-trans-highlight-l{border-left:2px solid red;margin-left:-2px}#goog-gt-tt .gt-trans-highlight-r{border-right:2px solid red;margin-right:-2px}#goog-gt-tt #alt-input{padding:2px}#goog-gt-tt #alt-input-text{font-size:11px;padding:2px 2px 3px;margin:0;background-color:#fff;color:#333;border:1px solid #d9d9d9;border-top:1px solid #c0c0c0;display:inline-block;vertical-align:top;height:21px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-border-radius:1px}#goog-gt-tt #alt-input-text:hover{border:1px solid #b9b9b9;border-top:1px solid #a0a0a0;-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1)}#goog-gt-tt #alt-input-text:focus{-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);outline:none;border:1px solid #4d90fe}#goog-gt-tt #alt-input-submit{font-size:11px;padding:2px 6px 3px;margin:0 0 0 2px;height:21px}.goog-te-spinner-pos, #goog-gt-tt {display: none;}</style></head><body>
+    <div class="related" role="navigation" aria-label="navigation connexe">
+      <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">La navigation</font></font></h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="https://flask.palletsprojects.com/en/3.0.x/genindex/" title="Index Général" accesskey="I"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">index</font></font></a></li>
+        <li class="right">
+          <a href="https://flask.palletsprojects.com/en/3.0.x/py-modindex/" title="Index Module Python"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">module</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> |</font></font></li>
+        <li class="right">
+          <a href="https://flask.palletsprojects.com/en/3.0.x/tutorial/factory/" title="Configuration de l&#39;Application" accesskey="N"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">suivant</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> |</font></font></li>
+        <li class="right">
+          <a href="https://flask.palletsprojects.com/en/3.0.x/tutorial/" title="Tutoriel" accesskey="P"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">précédent</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> |</font></font></li>
+        <li class="nav-item nav-item-0"><a href="https://flask.palletsprojects.com/en/3.0.x/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Documentation Flasque (3.0.x)</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> »</font></font></li>
+          <li class="nav-item nav-item-1"><a href="https://flask.palletsprojects.com/en/3.0.x/tutorial/" accesskey="U"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tutoriel</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> »</font></font></li>
+        <li class="nav-item nav-item-this"><a href="https://flask.palletsprojects.com/en/3.0.x/tutorial/layout/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mise en page du Projet</font></font></a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="project-layout">
+<h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mise en page du Projet</font></font><a class="headerlink" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/layout/#project-layout" title="Lien vers cette rubrique"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">¶</font></font></a></h1>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Créez un répertoire de projet et entrez-le:</font></font></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ mkdir flask-tutorial
+$ cd flask-tutorial
+</pre></div>
+</div>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Puis suivez le </font></font><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/installation/"><span class="doc"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">instructions d'installation</font></font></span></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> se mettre
+installez un environnement virtuel Python et Flask pour votre projet.</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Le tutoriel supposera que vous travaillez à partir du </font></font><code class="docutils literal notranslate"><span class="pre">flask-tutorial</span></code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+répertoire à partir de maintenant. Les noms de fichiers en haut de chaque bloc de code sont
+par rapport à ce répertoire.</font></font></p>
+<hr class="docutils">
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Une application Flask peut être aussi simple qu'un seul fichier.</font></font></p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello.py</span></code></span><a class="headerlink" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/layout/#id1" title="Lien vers ce code"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">¶</font></font></a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">'Hello, World!'</span>
+</pre></div>
+</div>
+</div>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cependant, à mesure qu'un projet s'agrandit, il devient écrasant de tout garder
+le code dans un fichier. Les projets python utilisent </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">paquets</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> organiser le code
+dans plusieurs modules qui peuvent être importés si nécessaire, et le
+ce tutoriel le fera aussi.</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Le répertoire du projet contiendra:</font></font></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">flaskr/</span></code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">, un paquet Python contenant votre code d'application et
+fichiers.</font></font></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tests/</span></code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">, un répertoire contenant des modules de test.</font></font></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.venv/</span></code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">, un environnement virtuel Python où Flask et autres
+des dépendances sont installées.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fichiers d'installation indiquant à Python comment installer votre projet.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Configuration de contrôle de version, telle que </font></font><a class="reference external" href="https://git-scm.com/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">. Tu devrais prendre l'habitude de
+en utilisant un certain type de contrôle de version pour tous vos projets, peu importe
+la taille.</font></font></p></li>
+<li><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tous les autres fichiers de projet que vous pourriez ajouter à l'avenir.</font></font></p></li>
+</ul>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">À la fin, la disposition de votre projet ressemblera à ceci:</font></font></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>/home/user/Projects/flask-tutorial
+├── flaskr/
+│   ├── __init__.py
+│   ├── db.py
+│   ├── schema.sql
+│   ├── auth.py
+│   ├── blog.py
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── auth/
+│   │   │   ├── login.html
+│   │   │   └── register.html
+│   │   └── blog/
+│   │       ├── create.html
+│   │       ├── index.html
+│   │       └── update.html
+│   └── static/
+│       └── style.css
+├── tests/
+│   ├── conftest.py
+│   ├── data.sql
+│   ├── test_factory.py
+│   ├── test_db.py
+│   ├── test_auth.py
+│   └── test_blog.py
+├── .venv/
+├── pyproject.toml
+└── MANIFEST.in
+</pre></div>
+</div>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Si vous utilisez le contrôle de version, les fichiers suivants sont générés
+lors de la gestion de votre projet, il faut ignorer. Il peut y avoir d'autres fichiers
+basé sur l'éditeur que vous utilisez. En général, ignorez les fichiers que vous n'avez pas
+écrire. Par exemple, avec git:</font></font></p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></span><a class="headerlink" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/layout/#id2" title="Lien vers ce code"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">¶</font></font></a></div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.venv/
+
+*.pyc
+__pycache__/
+
+instance/
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+dist/
+build/
+*.egg-info/
+</pre></div>
+</div>
+</div>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Continuer </font></font><a class="reference internal" href="https://flask.palletsprojects.com/en/3.0.x/tutorial/factory/"><span class="doc"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Configuration de l'application</font></font></span></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">.</font></font></p>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <span id="sidebar-top"></span>
+      <div class="sphinxsidebar" role="navigation" aria-label="navigation principale">
+        <div class="sphinxsidebarwrapper">
+  
+    
+            <p class="logo"><a href="https://flask.palletsprojects.com/en/3.0.x/">
+              <img class="logo" src="./1Mise en page du Projet_files/flask-vertical.webp" alt="Logo">
+            </a></p>
+  
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">La navigation</font></font></h3>
+<ul>
+  <li><a href="https://flask.palletsprojects.com/en/3.0.x/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aperçu</font></font></a>
+    <ul>
+      <li><a href="https://flask.palletsprojects.com/en/3.0.x/tutorial/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tutoriel</font></font></a>
+        <ul>
+          <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Précédent: </font></font><a href="https://flask.palletsprojects.com/en/3.0.x/tutorial/" title="chapitre précédent"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tutoriel</font></font></a>
+          </li><li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prochain: </font></font><a href="https://flask.palletsprojects.com/en/3.0.x/tutorial/factory/" title="prochain chapitre"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Configuration de l'application</font></font></a></li></ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<div id="searchbox" style="display: block;" role="search">
+  <h3 id="searchlabel"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Recherche rapide</font></font></h3>
+    <div class="searchformwrapper">
+    <form class="search" action="https://flask.palletsprojects.com/en/3.0.x/search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input type="submit" value="Aller"></font></font>
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script><div id="ethical-ad-placement"><div id="rtd-sidebar" data-ea-publisher="readthedocs-pallets" data-ea-type="readthedocs-sidebar" data-ea-manual="true" class="ethical-alabaster" data-ea-keywords="flask|jinja|python|readthedocs-project-96|readthedocs-project-flask|web-framework|werkzeug|wsgi" data-ea-campaign-types="community|house|paid"></div></div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+    <div class="footer" role="contentinfo"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+    © Copyright 2010 Palettes.
+      Créé en utilisant </font></font><a href="https://www.sphinx-doc.org/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sphinx</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 7.2.6.
+    </font></font></div>
+  <script src="./1Mise en page du Projet_files/version_warning_offset.js.téléchargement"></script>
+
+  
+<!-- Inserted RTD Footer -->
+
+<div class="injected">
+
+  
+  <div class="rst-versions rst-badge" data-toggle="rst-versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book">&nbsp;</span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+      v: 3,0 x
+      </font></font><span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+
+      
+      
+      <dl>
+        <dt><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Langue</font></font></dt>
+
+        
+
+        <dd class="rtd-current-item">
+          <a href="https://flask.palletsprojects.com/en/3.0.x/tutorial/layout/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">en</font></font></a>
+        </dd>
+
+        
+        
+        
+        
+        
+        <dd>
+          <a href="https://flask.palletsprojects.com/es/main/tutorial/layout/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">es</font></font></a>
+        </dd>
+        
+        
+        
+        
+        
+        <dd>
+          <a href="https://flask.palletsprojects.com/fa/latest/tutorial/layout/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">fa</font></font></a>
+        </dd>
+        
+        
+        
+
+      </dl>
+      
+      
+      <dl>
+        <dt><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Versions</font></font></dt>
+        
+        <dd>
+          <a href="https://flask.palletsprojects.com/en/latest/tutorial/layout/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dernier</font></font></a>
+        </dd>
+        
+        <dd class="rtd-current-item">
+          <a href="https://flask.palletsprojects.com/en/3.0.x/tutorial/layout/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3.0.x</font></font></a>
+        </dd>
+        
+        <dd>
+          <a href="https://flask.palletsprojects.com/en/2.3.x/tutorial/layout/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2.3.x</font></font></a>
+        </dd>
+        
+        <dd>
+          <a href="https://flask.palletsprojects.com/en/2.2.x/tutorial/layout/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2.2.x</font></font></a>
+        </dd>
+        
+        <dd>
+          <a href="https://flask.palletsprojects.com/en/2.1.x/tutorial/layout/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2.1.x</font></font></a>
+        </dd>
+        
+        <dd>
+          <a href="https://flask.palletsprojects.com/en/2.0.x/tutorial/layout/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2.0.x</font></font></a>
+        </dd>
+        
+        <dd>
+          <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/layout/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1.1.x</font></font></a>
+        </dd>
+        
+      </dl>
+      
+      
+
+      
+      
+      
+
+      
+      <dl>
+        
+        <!-- These are kept as relative links for internal installs that are http -->
+        <dt><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sur Lire les Docs</font></font></dt>
+        <dd>
+          <a href="https://readthedocs.org/projects/flask/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Accueil du projet</font></font></a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/flask/builds/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Compilation</font></font></a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/flask/downloads/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Élévations</font></font></a>
+        </dd>
+      </dl>
+      
+
+      
+
+      
+      <dl>
+        <dt><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sur GitHub</font></font></dt>
+        <dd>
+          <a href="https://github.com/pallets/flask/blob/3.0.x/docs/tutorial/layout.rst"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Voir</font></font></a>
+        </dd>
+        
+        <dd>
+          <a href="https://github.com/pallets/flask/edit/3.0.x/docs/tutorial/layout.rst"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Modificateur</font></font></a>
+        </dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        <dt><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Recherche</font></font></dt>
+        <dd>
+          <div style="padding: 6px;">
+            
+            <form id="flyout-search-form" class="wy-form" target="_blank" action="https://readthedocs.org/projects/flask/search/" method="get">
+              <input type="text" name="q" aria-label="Chercher dans la doc" placeholder="Chercher dans la doc">
+              </form>
+          </div>
+        </dd>
+      </dl>
+      
+
+      <hr>
+
+      
+        <small>
+          <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Héberge par </font></font><a href="https://readthedocs.org/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lire les Docs</font></font></a></span>
+          <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> · </font></font></span>
+          <a href="https://docs.readthedocs.io/page/privacy-policy.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Politique de confidentialité</font></font></a>
+        </small>
+      
+
+      
+    </div>
+  </div>
+  
+
+</div><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciLz4=" width="20" height="20" alt="Google Translate"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
