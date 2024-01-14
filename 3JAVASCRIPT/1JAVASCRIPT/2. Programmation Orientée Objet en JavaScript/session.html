@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+
+    main, header {
+        max-width: 60rem;
+        margin: auto;
+    }
+
+    /* general */
+
+    .block .header {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.25;
+      margin: 0 0 10px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin: 2rem 0 0 0;
+    }
+
+    .block .entries {
+        margin-left: 1rem;
+    }
+
+    /* chat */
+
+    .block.chat .entries {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .block.chat .entry {
+        margin-top: 12px;
+        max-width: 75%;
+        margin: 6px 0;
+    }
+
+    .block.chat .entry.assistant {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .block.chat .entry.assistant .avatar {
+        width:  50px;
+        height:  50px;
+        object-fit: contain;
+        border-radius: 500px;
+        content: url("https://framerusercontent.com/images/52GwNT9bVs3uFBc70y0T0CVdMhA.png");
+    }
+
+    .block.chat .entry.assistant .message {
+        background-color: lightblue;
+        border-radius: 8px;
+        padding: 4px 12px;
+
+        /* gap in parent could have been better but it seems to be unsupported in the pdf */
+        margin-left: 8px;
+    }
+
+    .block.chat .entry.user {
+        align-self: flex-end;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .block.chat .entry.user .avatar {
+        width:  50px;
+        height:  50px;
+        object-fit: contain;
+        border-radius: 500px;
+        content: url("https://ui-avatars.com/api/?name=serigne-kosso dieng&background=221b2e&color=fff&rounded=true");
+    }
+
+    .block.chat .entry.user .message {
+        background-color: #edf2f4;
+        border-radius: 8px;
+        padding: 4px 12px;
+        margin-right: 8px;
+    }
+
+    .block.chat .entry.description {
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        border: 2px solid #221b2e;
+        margin: 1.4rem 0;
+        padding: 4px 12px;
+        border-radius: 8px;
+    }
+
+    .block.chat .entry.description::after {
+      margin-top: 4px;
+      content: "Product Description";
+      float: right;
+    }
+
+    .block.chat .entry.description .avatar {
+        display: none;
+    }
+
+    .block.spec h1 {
+      font-size: 1.4em;
+    }
+
+    .block.spec h2 {
+      font-size: 1.2em;
+      font-style: italic;
+    }
+
+    /* generated-image */
+
+    .block.generated-image .entry {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .block.generated-image .entry img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    /* sketched-image */
+
+    .block.sketched-image .entry {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .block.sketched-image .entry img {
+        border: 1px solid black;
+    }
+
+    /* uploaded-image */
+
+    .block.uploaded-image .entry {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .block.uploaded-image .entry img {
+    }
+
+    /* creativeness-controller-value */
+    .block.creativeness-controller-value .entry {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .block.creativeness-controller-value .entry p {
+      font-size: 18px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+    .block.creativeness-controller-value .entry .progress {
+      margin-left: 1rem;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .block.creativeness-controller-value .entry .progress div {
+      border: 1px solid black;
+      height: 30px;
+      display: inline-block;
+    }
+
+    .block.creativeness-controller-value .entry .progress div:nth-of-type(1) {
+      background-color: lightgreen;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-right: 0;
+
+      background: #00ff00;
+    }
+
+    .block.creativeness-controller-value .entry .progress div:nth-of-type(2) {
+      background-color: transparent;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-left: 0;
+    }
+
+    .block.creativeness-controller-value .entry .progress.empty div {
+      width: 100%;
+      border: 1px solid black;
+      border-radius: 20px;
+      background-color: transparent;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1 class="headline">Session Document</h1>
+    <p class="author"><strong>Authored: </strong>serigne-kosso dieng</p>
+    <p class="name"><strong>Date: </strong>2024-01-14</p>
+  </header>
+
+  <main>
+
+    
+      <div class="block chat">
+
+        
+          <p class="header">Chat</p>
+          <div class="entries">
+            
+              <div class="entry assistant">
+                <div class="avatar"></div>
+                <div class="message">
+                  <p>
+                  Hi, Im Leo, your engineering design copilot.   **What would you like to design?**
+                  </p>
+                </div>
+              </div>
+            
+              <div class="entry user">
+                <div class="avatar"></div>
+                <div class="message">
+                  <p>
+                  ok
+                  </p>
+                </div>
+              </div>
+            
+              <div class="entry assistant">
+                <div class="avatar"></div>
+                <div class="message">
+                  <p>
+                  Great! So what is the name of the product you want me to describe?
+                  </p>
+                </div>
+              </div>
+            
+          </div>
+        
+
+      </div>
+      
+  </main>
+</body>
+
+</html>
