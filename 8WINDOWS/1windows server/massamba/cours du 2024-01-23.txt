@@ -45,3 +45,15 @@ Oracle ==>  OIC
 -KVM
 -VMWARE
 
+----------------------------------------------------------------------------------
+
+-------Definir la virtualisation
+
+-hyperviseur de type1 vs type2
+-Proxmox
+-Xenserver
+-KVM
+-ESXI
+-HyperV
+
+

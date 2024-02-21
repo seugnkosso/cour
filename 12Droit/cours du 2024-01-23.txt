@@ -1,0 +1,47 @@
+---------------------------- 23-01-2024 -----------------------
+
+================ PROGRAMME ============
+
+Partie 1 : Environnement Poste à Poste
+  - Mise en reseau
+  - Partage
+ 
+Partie 2: Environnement Client/Server
+  -Presentation et Installation de la plateforme
+  - Services Rx
+  - DNS
+  - DHCP
+  - IIS (Internet Information Services) : HTTP, FTP
+  - WSUS (windows Software Update Services)
+  - Annuaire Active Directory
+  - Messagerie
+  - Securité : GPO (Group Policy Object)
+
+Partie 3 : Projets
+  - Cloud et Virtualisation
+  - Messagerie Exchange
+
+
+--------------------------------------------------------------------------------
+jenkins
+DevOps
+DevSecOps	
+www.it-connect.fr
+
+youtube : kubernetes(k8s) documentary
+
+
+----------------------------------------------------------------------------------
+
+--------CLOUD (Un service)
+Microsoft ==> Azure
+Google ==>   GCP
+Amazon ==>   AWS
+Oracle ==>  OIC
+
+--------Virtualisation (Une technologie)
+-Proxmox
+-HyperV
+-KVM
+-VMWARE
+

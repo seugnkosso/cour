@@ -13,7 +13,7 @@ namespace GestionEtudiant.back.core.impl
     public class DataBase : IDataBase
     {
         private readonly string  connectionString= ConfigurationManager.ConnectionStrings["GES_ETU"].ConnectionString;
-        private SqlConnection sqlConnection=new SqlConnection();
+        private SqlConnection sqlConnection = new SqlConnection();
         //Relation =  Objet
         private SqlDataAdapter adapter=new SqlDataAdapter();
         protected string TableName;
@@ -86,7 +86,7 @@ namespace GestionEtudiant.back.core.impl
 
         public void OpenConnexion()
         {
-            if (sqlConnection.State== ConnectionState.Closed || sqlConnection.State== ConnectionState.Broken)
+            if (sqlConnection.State == ConnectionState.Closed || sqlConnection.State == ConnectionState.Broken)
             {
                 sqlConnection.ConnectionString = connectionString;
                 sqlConnection.Open();
