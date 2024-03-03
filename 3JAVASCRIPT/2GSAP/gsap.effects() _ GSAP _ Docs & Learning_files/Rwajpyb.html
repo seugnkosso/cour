@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)https://codepen.io/GreenSock/embed/Rwajpyb?default-tab=result&theme-id=41164 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Multiple pre-made effects</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="z6vIdEkQAWreAdcHgekMDOiQjL1JU6Ri/sxZxkvr6HYGz+Ol0fgZ7xizXbiOaqCFAnZ/yIZ47C6gWuUoLQpmJA==">
+<link rel="stylesheet" media="all" href="./embed-992188c7848763a8375a03d49163bdcf087367301bacd8a77262c5f5790eda9d.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #fbfbfb;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #fbfbfb;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #292a2b;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #292a2b;
+      color: #474747;
+      box-shadow: inset 0px 3px #0ae448;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #383838;
+    }
+
+    .embed-nav svg {
+      stroke: #383838 !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./panda-726633b24fda65b2f4e4f4f4e491f6547c57b9401428309f9f65b1be03210e37.css">
+<link rel="stylesheet" href="./xxYqgOR.css">
+</head>
+<body id="the-body" style="--borderWidth: 0;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/GreenSock/embed/Rwajpyb?default-tab=result&amp;theme-id=41164#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/GreenSock/embed/Rwajpyb?default-tab=result&amp;theme-id=41164#css-box" role="button" aria-pressed="false">
+CSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="https://codepen.io/GreenSock/embed/Rwajpyb?default-tab=result&amp;theme-id=41164#js-box" role="button" aria-pressed="false">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/GreenSock/embed/Rwajpyb?default-tab=result&amp;theme-id=41164#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/GreenSock/embed/Rwajpyb?default-tab=result&amp;theme-id=41164#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/GreenSock/pen/Rwajpyb" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="none" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"box fadeSlideTo"</span><span class="cm-tag cm-bracket">&gt;</span>to<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"box fadeSlideFrom"</span><span class="cm-tag cm-bracket">&gt;</span>from<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"box fadeSlideFromTo"</span><span class="cm-tag cm-bracket">&gt;</span>fromTo<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'https://fonts.googleapis.com/css?family=Signika+Negative:300,400&amp;display=swap'</span>);
+
+<span class="cm-tag">body</span> { 
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Signika Negative"</span>, <span class="cm-atom">sans-serif</span>; 
+  <span class="cm-property">font-weight</span>: <span class="cm-number">300</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">20px</span>;
+}
+
+<span class="cm-qualifier">.box</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">100px</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100px</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-keyword">green</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">24px</span>;
+  <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>
+}</code></pre>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-keyword">const</span> <span class="cm-def">gsapEffects</span> <span class="cm-operator">=</span> [
+  { 
+    <span class="cm-property">id</span>: <span class="cm-string">"fadeSlideTo"</span>,  
+    <span class="cm-property">props</span>: { <span class="cm-property">opacity</span>: <span class="cm-number">0.5</span>, <span class="cm-property">x</span>: <span class="cm-number">300</span>, <span class="cm-property">yoyo</span>: <span class="cm-atom">true</span>, <span class="cm-property">repeat</span>: <span class="cm-operator">-</span><span class="cm-number">1</span> }
+  },
+  { 
+    <span class="cm-property">id</span>: <span class="cm-string">"fadeSlideFrom"</span>, 
+    <span class="cm-property">animate</span>: <span class="cm-string">'from'</span>,
+    <span class="cm-property">props</span>: { <span class="cm-property">opacity</span>: <span class="cm-number">0.25</span>, <span class="cm-property">x</span>: <span class="cm-number">300</span>, <span class="cm-property">yoyo</span>: <span class="cm-atom">true</span>, <span class="cm-property">repeat</span>: <span class="cm-operator">-</span><span class="cm-number">1</span>  }
+  },
+  { 
+    <span class="cm-property">id</span>: <span class="cm-string">"fadeSlideFromTo"</span>, 
+    <span class="cm-property">animate</span>: <span class="cm-string">'fromTo'</span>, 
+    <span class="cm-property">props</span>: { <span class="cm-property">opacity</span>: <span class="cm-number">0.1</span>, <span class="cm-property">x</span>: <span class="cm-number">300</span>}, 
+    <span class="cm-property">props2</span>: { <span class="cm-property">opacity</span>: <span class="cm-number">1</span>, <span class="cm-property">x</span>: <span class="cm-number">600</span>, <span class="cm-property">yoyo</span>: <span class="cm-atom">true</span>, <span class="cm-property">repeat</span>: <span class="cm-operator">-</span><span class="cm-number">1</span>  }
+  }
+];
+
+<span class="cm-variable">gsapEffects</span>.<span class="cm-property">forEach</span>(<span class="cm-def">effect</span> <span class="cm-operator">=&gt;</span> {
+  <span class="cm-variable">gsap</span>.<span class="cm-property">registerEffect</span>({
+    <span class="cm-property">name</span>: <span class="cm-variable-2">effect</span>.<span class="cm-property">id</span>,
+    <span class="cm-property">defaults</span>: { <span class="cm-property">duration</span>: <span class="cm-number">1</span> },
+    <span class="cm-property">extendTimeline</span>: <span class="cm-atom">true</span>,
+    <span class="cm-property">effect</span>(<span class="cm-def">targets</span>, <span class="cm-def">config</span>) {
+      <span class="cm-keyword">if</span>(<span class="cm-variable-2">effect</span>.<span class="cm-property">animate</span> <span class="cm-operator">===</span> <span class="cm-string">'from'</span>){
+        <span class="cm-keyword">return</span> <span class="cm-variable">gsap</span>.<span class="cm-property">from</span>(<span class="cm-variable-2">targets</span>, {<span class="cm-meta">...</span><span class="cm-variable-2">effect</span>.<span class="cm-property">props</span>,<span class="cm-meta">...</span><span class="cm-variable-2">config</span> })
+      } 
+      <span class="cm-keyword">else</span> <span class="cm-keyword">if</span> (<span class="cm-variable-2">effect</span>.<span class="cm-property">animate</span> <span class="cm-operator">===</span> <span class="cm-string">'fromTo'</span>){ 
+        <span class="cm-keyword">return</span> <span class="cm-variable">gsap</span>.<span class="cm-property">fromTo</span>(<span class="cm-variable-2">targets</span>, {<span class="cm-meta">...</span><span class="cm-variable-2">effect</span>.<span class="cm-property">props</span>,<span class="cm-meta">...</span><span class="cm-variable-2">config</span> }, {<span class="cm-meta">...</span><span class="cm-variable-2">effect</span>.<span class="cm-property">props2</span>})
+        }
+      <span class="cm-keyword">else</span> {
+        <span class="cm-keyword">return</span> <span class="cm-variable">gsap</span>.<span class="cm-property">to</span>(<span class="cm-variable-2">targets</span>, {<span class="cm-meta">...</span><span class="cm-variable-2">effect</span>.<span class="cm-property">props</span>,<span class="cm-meta">...</span><span class="cm-variable-2">config</span> })
+      }
+    }
+  });
+});
+
+
+
+<span class="cm-keyword">let</span> <span class="cm-def">tl</span> <span class="cm-operator">=</span> <span class="cm-variable">gsap</span>.<span class="cm-property">timeline</span>();
+<span class="cm-variable">tl</span>.<span class="cm-property">fadeSlideTo</span>(<span class="cm-string">".fadeSlideTo"</span>)
+  .<span class="cm-property">fadeSlideFrom</span>(<span class="cm-string">".fadeSlideFrom"</span>, <span class="cm-number">0</span>)
+  .<span class="cm-property">fadeSlideFromTo</span>(<span class="cm-string">".fadeSlideFromTo"</span>, <span class="cm-number">0</span>)</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write; web-share; serial; xr-spatial-tracking" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Multiple pre-made effects" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" scrolling="yes" title="CodePen Preview for Multiple pre-made effects" data-src="https://codepen.io/GreenSock/fullembedgrid/Rwajpyb?animations=run&amp;type=embed" src="./Rwajpyb(1).html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/GreenSock" target="_blank" rel="noopener"><img src="./default.png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/GreenSock" target="_blank" rel="noopener">GSAP</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/GreenSock" target="_blank" rel="noopener" class="about-user-more">
+See more by @GreenSock on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js</a>
+</li>
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js</a>
+</li>
+<li>
+<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomBounce3.min.js" target="_blank">https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomBounce3.min.js</a>
+</li>
+<li>
+<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomEase3.min.js" target="_blank">https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomEase3.min.js</a>
+</li>
+<li>
+<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomWiggle3.min.js" target="_blank">https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomWiggle3.min.js</a>
+</li>
+<li>
+<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js" target="_blank">https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js</a>
+</li>
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/Draggable.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/Draggable.min.js</a>
+</li>
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/EaselPlugin.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/EaselPlugin.min.js</a>
+</li>
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/EasePack.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/EasePack.min.js</a>
+</li>
+<li>
+<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/GSDevTools3.min.js" target="_blank">https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/GSDevTools3.min.js</a>
+</li>
+<li>
+<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/InertiaPlugin.min.js" target="_blank">https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/InertiaPlugin.min.js</a>
+</li>
+<li>
+<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin3.min.js" target="_blank">https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin3.min.js</a>
+</li>
+<li>
+<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathHelper.min.js" target="_blank">https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathHelper.min.js</a>
+</li>
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js</a>
+</li>
+<li>
+<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Physics2DPlugin3.min.js" target="_blank">https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Physics2DPlugin3.min.js</a>
+</li>
+<li>
+<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/PhysicsPropsPlugin3.min.js" target="_blank">https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/PhysicsPropsPlugin3.min.js</a>
+</li>
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/PixiPlugin.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/PixiPlugin.min.js</a>
+</li>
+<li>
+<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrambleTextPlugin3.min.js" target="_blank">https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrambleTextPlugin3.min.js</a>
+</li>
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js</a>
+</li>
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js</a>
+</li>
+<li>
+<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js" target="_blank">https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js</a>
+</li>
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js</a>
+</li>
+</ol>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&quot;box fadeSlideTo&quot;&gt;to&lt;/div&gt;\n&lt;div class=&quot;box fadeSlideFrom&quot;&gt;from&lt;/div&gt;\n&lt;div class=&quot;box fadeSlideFromTo&quot;&gt;fromTo&lt;/div&gt;","css":"@import url(&#39;https://fonts.googleapis.com/css?family=Signika+Negative:300,400&amp;display=swap&#39;);\n\nbody { \n  font-family: &quot;Signika Negative&quot;, sans-serif; \n  font-weight: 300;\n  margin: 0;\n  padding: 0 20px;\n}\n\n.box {\n  width: 100px;\n  height: 100px;\n  background-color: green;\n  font-size: 24px;\n  color: white;\n  display: flex;\n  justify-content: center;\n  align-items: center\n}","js":"const gsapEffects = [\n{\n  id: &quot;fadeSlideTo&quot;,\n  props: { opacity: 0.5, x: 300, yoyo: true, repeat: -1 } },\n\n{\n  id: &quot;fadeSlideFrom&quot;,\n  animate: &#39;from&#39;,\n  props: { opacity: 0.25, x: 300, yoyo: true, repeat: -1 } },\n\n{\n  id: &quot;fadeSlideFromTo&quot;,\n  animate: &#39;fromTo&#39;,\n  props: { opacity: 0.1, x: 300 },\n  props2: { opacity: 1, x: 600, yoyo: true, repeat: -1 } }];\n\n\n\ngsapEffects.forEach(effect =&gt; {\n  gsap.registerEffect({\n    name: effect.id,\n    defaults: { duration: 1 },\n    extendTimeline: true,\n    effect(targets, config) {\n      if (effect.animate === &#39;from&#39;) {\n        return gsap.from(targets, { ...effect.props, ...config });\n      } else\n      if (effect.animate === &#39;fromTo&#39;) {\n        return gsap.fromTo(targets, { ...effect.props, ...config }, { ...effect.props2 });\n      } else\n      {\n        return gsap.to(targets, { ...effect.props, ...config });\n      }\n    } });\n\n});\n\n\n\nlet tl = gsap.timeline();\ntl.fadeSlideTo(&quot;.fadeSlideTo&quot;).\nfadeSlideFrom(&quot;.fadeSlideFrom&quot;, 0).\nfadeSlideFromTo(&quot;.fadeSlideFromTo&quot;, 0);"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-008e8e63bc8f4f7a03df3f5da5b5c4d5e25fe5a438f147d0a2325f15fcd47555.js.téléchargement"></script>
+
+
+</body></html>
