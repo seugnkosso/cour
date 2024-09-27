@@ -1,0 +1,25 @@
+--------------------Définition des Routes
+indiquent au serveur web comment répondre aux requêtes HTTP sur différentes URL
+---------Syntaxe de base pour définir une route
+@app.route('/')
+def index():
+    return 'Bonjour, monde !'
+---------------------------------------------------------
+
+
+
+-------------------Routes Dynamiques
+url avec des parite variable 
+-----Utilisation de paramètres variables dans les routes
+spécifier une partie de l'URL en utilisant <variable>
+----Récupération des valeurs des paramètres dynamiques
+les ajouter en tant qu'arguments de la fonction de vue correspondante
+---------------------------------------------------------
+
+
+-----------------Routes avec des Méthodes HTTP Spécifiques 
+
+
+
+
+

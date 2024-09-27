@@ -1,0 +1,52 @@
+-------------------------Utilisation de Jinja2 pour les templates
+-------Introduction à Jinja2
+-permet de générer des fichiers HTML dynamiques en intégrant des données provenant de votre application
+-------Installation de Jinja2 dans Flask
+-inclut Jinja2 par défaut
+---------Variables et Filtres Jinja2
+-{{ variable | upper }} : Convertit la variable en majuscules.
+---------Contrôle de Flux avec Jinja2
+-es boucles for et les instructions if.
+-{% for item in items %}
+-{% if condition %}
+--------------------------------------------------------------
+
+
+--------------------------Passage de données aux templates
+-------Passage de Données Statiques aux Templates
+-utilisant la méthode render_template fournie par Flask
+-------Passage de Données Dynamiques aux Templates
+-inclure ces données en tant qu'arguments dans la fonction de rendu du template
+-------Utilisation du Contexte de la Requête Flask
+-Flask fournit un objet request qui peut être utilisé pour accéder aux données de la requête
+--------Passage de Données Complexes aux Templates (Listes, Dictionnaires, Objets)
+------------------------------------------------------------------------
+
+
+
+-------------------------- Héritage de templates
+-------Compréhension 
+-Cela vous permet de définir un template de base avec des sections communes, puis d'étendre ce template de base pour créer des templates plus spécifiques
+--------Création de Templates de Base
+-créez simplement un fichier HTML avec les éléments communs à toutes vos pages
+--------Extension de Templates de Base
+-créez un nouveau fichier HTML et utilisez la directive {% extends "base.html" %} pour indiquer que ce nouveau template étend le template de base
+--------Utilisation de Blocs pour la Personnalisation
+-Vous pouvez utiliser autant de blocs que nécessaire dans vos templates pour personnaliser différentes parties de la structure de base
+------------------------------------------------------------------------------------
+
+
+
+----------------------------Contrôle de flux et de structures dans les templates 
+--------Utilisation de Structures de Contrôle (if, for) dans les Templates
+-------Manipulation des Boucles dans les Templates
+-------Gestion des Conditions dans les Templates
+-------Gestion des Conditions dans les Templates
+---------------------------------------------------
+
+
+----------------------------Inclusion de templates
+----Utilisation de l'Inclusion pour la Réutilisation de Code HTML
+-vous pouvez utiliser la directive {% include 'nom_template.html' %} dans vos templates
+----Création de Templates Modulaires
+-vous pouvez diviser votre code HTML en parties réutilisables et les placer dans des fichiers séparés

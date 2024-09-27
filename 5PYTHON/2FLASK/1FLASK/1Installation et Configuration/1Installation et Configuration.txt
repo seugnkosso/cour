@@ -1,0 +1,52 @@
+-------------installation de python et flask 
+----installation de python
+-telechargement 
+-vérication de l'installation 
+----installation de flask 
+-installé un environnement virtuel
+python -m venv venv
+-activé l'environnement
+venv/scripts/activate
+-utilisation de pip 
+pip install flask
+--------------------------------------------------------------------
+
+
+-----------------creation d'un environnement virtuel
+----comprehension
+-avantage de l,utilisation 
+isolation des dépendance 
+éviter les conflit de version 
+portabilité
+propreté du systeme
+-Gestion des dépendances spécifiques au projet
+mettre les dependance dans un fichier requirements.txt
+reinstaller tous les dependances 
+pip install -t requirements.txt
+--------------------------------------------------------------------
+
+
+
+-----------------Configuration d'un Projet Flask de Base 
+--------Création d'une structure de répertoire
+----Organisation des fichiers pour un projet Flask typique
+mon_projet_flask/
+├── app/
+│   ├── __init__.py
+│   ├── routes.py
+├── venv/ (environnement virtuel)
+├── templates/
+├── static/
+├── config.py
+└── run.py
+----Configuration de l'application Flask
+-Création d'un fichier d'application Flask --init__.py
+-Définition des routes routes.py
+-Configuration des paramètres de l'application :config.py
+----Mise en place d'une vue de test
+--------------------------------------------------------------------
+
+
+
+
+

@@ -1,0 +1,44 @@
+------------------Utilisation des Méthodes HTTP
+------GET : Pour récupérer des données
+-----POST : Pour soumettre des données
+-----PUT : Pour modifier des données
+-----DELETE : Pour supprimer des données
+-------------------------------------------------------------
+
+
+
+------------------PATCH : Mise à jour partielle de données OPTIONS
+-----PATCH : Pour mettre à jour partiellement des données
+-----OPTIONS : Pour obtenir les options de communication disponibles pour la ressource cible
+-----HEAD : Pour récupérer les métadonnées sans le corps de la réponse
+===========================================================================
+
+
+------------------Récupération de Données de Requête
+-------Extraction des Paramètres de l'URL (Query Parameters)
+-sont des informations ajoutées à la fin de l'URL après un point d'interrogation (?)
+-request.args.get() est utilisée pour extraire les paramètres de la requête GET
+----Analyse des Données Soumises via POST (Form Data)
+-les données sont généralement envoyées sous forme de formulaire
+-request.form.get() est utilisé pour récupérer les données envoyées via POST
+----Traitement des Données JSON envoyées dans le Corps de la Requête
+-request.json est utilisé pour obtenir les données JSON de la requête
+===========================================================================
+
+
+
+
+------------------Validation des Données de Requête
+-----Validation des Données de Formulaire
+-----Vérification des Données de Requête JSON
+-----Utilisation de la Bibliothèque de Validation WTForms
+-WTForms est une bibliothèque de validation populaire pour Flask
+===========================================================================
+
+
+-----------------Sécurité Liée aux Requêtes
+-----Protection CSRF (Cross-Site Request Forgery)
+-La CSRF est une attaque qui exploite l'authentification d'un utilisateur sur un site web pour effectuer des actions non autorisées sur un autre site où l'utilisateur est également authentifié.
+-----Utilisation de Tokens CSRF dans les Formulaires
+-Un token CSRF est un jeton unique généré côté serveur qui est inclus dans les formulaires HTML 
+-----Configuration de la Protection CSRF dans Flask
